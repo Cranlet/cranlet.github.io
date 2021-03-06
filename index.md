@@ -1,37 +1,169 @@
-## Welcome to GitHub Pages
+<html lang='nl'>
 
-You can use the [editor on GitHub](https://github.com/Cranlet/locationestimatr.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35913371-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-### Markdown
+        gtag('js', new Date());
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        gtag('config', 'UA-35913371-9');
+    </script>
+    <meta charset='utf-8'/>
+    <title>Location Estimatr</title>
+    <meta name='theme-color' content='#3cba92'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' sizes='192x192' href='img/favicon.png'>
+    <link rel='shortcut icon' type='image/png' href='img/favicon.png'>
+    <!--<link rel="icon" href="img/favicon.ico" type="image/x-icon" />-->
+    <!--<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />-->
+    <!-- Favicon moet 192x192 zijn -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='homepage/main.css'>
+    <script src='homepage/script.js' type='text/javascript'></script>
+</head>
 
-```markdown
-Syntax highlighted code block
+<body>
+<div class="front-page">
+    <h1>Location Estimatr</h1>
+    <h3>
+        Location Estimatr 2 now available at <a href="https://locationestimatr.web.app?utm_source=le1">locationestimatr.web.app</a>
+    </h3>
+    <p>Location Estimatr 1 will stay live here.</p>
+    <div class="maps">
+        <h2>Official Maps</h2>
+        <div class="kml-maps map-container">
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/world.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">World</div>
+                    <div class="map-actions">
+                        <a href=./play#world class="map-play">Play</a>
+                        <a href=./highscore#world class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/my_area.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">My Area</div>
+                    <div class="map-actions">
+                        <label class="radius-picker">
+                            <span>Radius</span>
+                            <input type="number" class="radius-input" value="10" placeholder="Radius in km">
+                            <span>km</span>
+                        </label>
+                        <span class="clickable map-play" onmouseup="playMyArea(event)">Play</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Country Collection Maps</h2>
+        <div class="collection-maps map-container">
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/european_union.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">European Union</div>
+                    <div class="map-actions">
+                        <a href=./play#european_union class="map-play">Play</a>
+                        <a href=./highscore#european_union class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/benelux.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">Benelux</div>
+                    <div class="map-actions">
+                        <a href=./play#benelux class="map-play">Play</a>
+                        <a href=./highscore#benelux class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/africa.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">Africa</div>
+                    <div class="map-actions">
+                        <a href=./play#africa class="map-play">Play</a>
+                        <a href=./highscore#africa class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/north_america.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">North America</div>
+                    <div class="map-actions">
+                        <a href=./play#north_america class="map-play">Play</a>
+                        <a href=./highscore#north_america class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/south_america.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">South America</div>
+                    <div class="map-actions">
+                        <a href=./play#south_america class="map-play">Play</a>
+                        <a href=./highscore#south_america class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/europe.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">Europe</div>
+                    <div class="map-actions">
+                        <a href=./play#europe class="map-play">Play</a>
+                        <a href=./highscore#europe class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/asia.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">Asia</div>
+                    <div class="map-actions">
+                        <a href=./play#asia class="map-play">Play</a>
+                        <a href=./highscore#asia class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/south_east_asia.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">South East Asia</div>
+                    <div class="map-actions">
+                        <a href=./play#south_east_asia class="map-play">Play</a>
+                        <a href=./highscore#south_east_asia class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map-background" style="background-image:url(data/thumbnails/oceania.jpg)"></div>
+                <div class="map-text">
+                    <div class="map-title">Oceania</div>
+                    <div class="map-actions">
+                        <a href=./play#oceania class="map-play">Play</a>
+                        <a href=./highscore#oceania class="map-score">Scores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Country Maps</h2>
+        <div class="country-maps map-container">
+        </div>
+    </div>
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYatWfT-trd9gY9jKXUhXb-e_p7NbOsbs&libraries=geometry"></script>
+</body>
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Cranlet/locationestimatr.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
